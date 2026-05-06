@@ -3,6 +3,7 @@ import { JWT_SECRET } from "../config/keyConfig.js";
 
 
 export const verifyTokenCookie = (req, res, next) => {
+    console.log("COOKIES RECEIVED:", req.cookies);
     const token = req.cookies.token
 
     if(!token) {
